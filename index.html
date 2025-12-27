@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تغییر عکس با JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            border: 2px solid #ccc;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 18px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>تمرین تغییر عکس با JS</h2>
+
+    
+    <img id="myImage"
+         src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Light_bulb_off.jpg"
+         alt="لامپ">
+
+    <br>
+
+    <!-- دکمه‌ها -->
+    <button onclick="turnOn()">روشن کن 💡</button>
+    <button onclick="turnOff()">خاموش کن 💡</button>
+
+    <script>
+       
+        const img = document.getElementById("myImage");
+
+       
+        const lampOnUrl  = "https://www.w3schools.com/js/pic_bulbon.gif";
+        const lampOffUrl = "https://www.w3schools.com/js/pic_bulboff.gif";
+
+        function turnOn() {
+            img.src = lampOnUrl;
+        }
+
+        function turnOff() {
+            img.src = lampOffUrl;
+        }
+    </script>
+
+</body>
+</html>
